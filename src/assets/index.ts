@@ -1,0 +1,9 @@
+export { default as chairman1 } from "@/assets/chairman-1.png";
+export { default as chairman2 } from "@/assets/chairman-2.png";
+export { default as chairman3 } from "@/assets/chairman-3.png";
+export { default as chairmanPic } from "@/assets/chairman-pic.png";
+export { default as chairmanSignature } from "@/assets/chairman-signature.png";
+export { default as detailImage } from "@/assets/detail_image.png";
+export { default as dimHero } from "@/assets/dimHero.png";
+export { default as headlinerImage } from "@/assets/headliner.jpeg";
+export { default as heroImage } from "@/assets/hero.png";

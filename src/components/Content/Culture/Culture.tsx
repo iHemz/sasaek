@@ -1,3 +1,5 @@
+import { detailImage } from "@/assets";
+
 import "@/components/Content/Culture/culture.scss";
 
 export function Culture() {
@@ -8,7 +10,7 @@ export function Culture() {
         <div className="detail-container">
           <p>우리는</p>
           <div className="img-wrapper">
-            <img src="src/assets/detail_image.png" alt="" />
+            <img src={detailImage} alt="" />
           </div>
         </div>
         <p className="subtitle">사색의향기입니다.</p>

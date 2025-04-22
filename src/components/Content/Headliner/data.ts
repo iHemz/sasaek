@@ -1,3 +1,4 @@
+import { heroImage } from "@/assets";
 import { generateID } from "@/libs/common";
 
 export type HeroData = {
@@ -14,13 +15,13 @@ export const data: HeroData[] = [
     title: "특별한 나눔",
     headline: "함께하는 마음이 만드는 소중한 변화",
     footer: "즐거움과 나눔이 있는 감동의 순간",
-    image: "src/assets/hero.png",
+    image: heroImage,
   },
   {
     id: generateID(),
     title: "특별한 나눔",
     headline: "함께하는 마음이 만드는 소중한 변화",
     footer: "즐거움과 나눔이 있는 감동의 순간",
-    image: "src/assets/hero.png",
+    image: heroImage,
   },
 ];
