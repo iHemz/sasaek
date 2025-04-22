@@ -1,0 +1,119 @@
+@use "@/libs/variables" as v;
+
+.chairman-frame {
+  @include v.add-flex(column, 120px);
+  padding: v.add-padding(0, 16.67%);
+  overflow: hidden;
+  position: relative;
+
+  .section-1 {
+    max-width: 1280px;
+    padding: v.add-padding(0, 40px);
+  }
+
+  aside {
+    width: 34.3%;
+    height: 435px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    .decorator {
+      position: absolute;
+      background: v.$denim-200;
+      bottom: 0;
+      left: 0;
+      width: 960px;
+      height: 324px;
+      border-top-left-radius: 162px;
+      border-bottom-left-radius: 162px;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 104px;
+    }
+  }
+}
+
+.chairman-info {
+  max-width: 900px;
+  @include v.add-flex(column, 60px);
+
+  .title {
+    @include v.secondary-d3;
+  }
+
+  .chairman-details {
+    @include v.add-flex(column, 10px);
+
+    .details-column {
+      @include v.add-flex(column, 10px);
+      @include v.primary-p2;
+      color: v.$grey-4;
+      text-align: left;
+    }
+
+    .signature-column {
+      @include v.add-flex(row, 10px, null, center);
+      @include v.secondary-h2;
+
+      img {
+        width: 187px;
+        height: 79px;
+      }
+    }
+
+    .chairman-btn {
+      border-radius: 0;
+      width: auto;
+      padding: v.add-padding(4px);
+      height: auto;
+      @include v.add-flex(row, 4px, center);
+      @include v.singleline-button1;
+      background-color: transparent;
+      color: v.$text-color;
+
+      &:hover {
+        background-color: rgba(v.$text-color, 0.1);
+      }
+    }
+  }
+}
+
+.chairmen-section {
+  @include v.add-flex(row, null, space-between);
+  padding: v.add-padding(0, 40px);
+  max-width: 1280px;
+  width: 100%;
+
+  .avatar {
+    @include v.add-flex(column, 20px, null, center);
+    width: 21%;
+
+    .img-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background: v.$grey-3;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+
+        &.img-bottom {
+          height: 100%;
+          object-position: center;
+        }
+      }
+    }
+
+    p {
+      @include v.secondary-h2;
+    }
+  }
+}

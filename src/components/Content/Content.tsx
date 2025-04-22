@@ -1,3 +1,4 @@
+import { Chairman } from "@/components/Content/Chairman/Chairman";
 import { Culture } from "@/components/Content/Culture/Culture";
 import { Headliner } from "@/components/Content/Headliner/Headliner";
 
@@ -6,6 +7,7 @@ export function Content() {
     <main>
       <Headliner />
       <Culture />
+      <Chairman />
     </main>
   );
 }

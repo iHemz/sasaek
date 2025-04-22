@@ -23,6 +23,9 @@ $font-size: 16px;
 $line-height: 1.5;
 $grey-1: #d9d9d9;
 $grey-2: #eee;
+$grey-3: #bbbbbb;
+$grey-4: #4c4c4c;
+$denim-200: #d0def0;
 $transition: all 500ms ease-in-out;
 
 @mixin prefix($property, $value, $prefixes) {
@@ -109,6 +112,13 @@ $transition: all 500ms ease-in-out;
   @include use-pretendard;
 }
 
+@mixin singleline-button1 {
+  font-weight: 500;
+  font-size: 18px;
+  @include use-pretendard;
+  line-height: 1;
+}
+
 @mixin singleline-button2 {
   font-weight: 500;
   @include use-pretendard;
@@ -128,4 +138,14 @@ $transition: all 500ms ease-in-out;
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
+}
+
+@mixin secondary-d3 {
+  @include -bold-style;
+  font-size: 60px;
+}
+
+@mixin secondary-h2 {
+  @include -bold-style;
+  font-size: 24px;
 }
