@@ -1,0 +1,34 @@
+@use "@/libs/variables" as v;
+
+.culture {
+  @include v.add-flex(column, 28px);
+  padding: v.add-padding(240px, 40px);
+  margin: v.add-padding(0, 16.67%);
+  max-width: 1280px;
+
+  .culture-info {
+    @include v.add-flex(column, 12px, null, center);
+    @include v.primary-d1;
+
+    .detail-container {
+      @include v.add-flex(row, 32px, null, center);
+
+      .img-wrapper {
+        width: 280px;
+        height: 94px;
+        border-radius: 100px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .culture-description {
+    @include v.primary-p2;
+  }
+}

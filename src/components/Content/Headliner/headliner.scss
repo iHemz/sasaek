@@ -1,0 +1,71 @@
+@use "@/libs/variables" as v;
+
+.headliner {
+  padding: v.add-padding(0, 60px);
+  height: 850px;
+}
+
+.hero {
+  position: relative;
+  @include v.inherit-size;
+  border-radius: 48px;
+  overflow: hidden;
+
+  article {
+    @include v.inherit-size;
+    @include v.add-flex(column, 32px, center, center);
+    position: absolute;
+    opacity: 0;
+    transition: v.$transition;
+    color: v.$base-bg;
+
+    img {
+      object-fit: fill;
+      @include v.inherit-size;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    p:first-child {
+      @include v.batang-32-bold;
+    }
+
+    p:nth-of-type(2) {
+      @include v.secondary-d1;
+    }
+
+    p:nth-of-type(3) {
+      @include v.primary-p1;
+    }
+
+    .divider {
+      width: 40px;
+      border: 1px solid v.$base-bg;
+      rotate: 45deg;
+    }
+  }
+
+  .controls {
+    width: 19.7%;
+    height: 104px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    padding-left: 48px;
+    @include v.add-flex(row, 56px, space-between, center);
+  }
+}
+
+section {
+  .progress,
+  .buttons {
+    @include v.add-flex(row, 12px, null, center);
+  }
+}

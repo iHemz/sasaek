@@ -6,16 +6,26 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint . && pnpm run lint:stylelint",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview",
+    "lint:stylelint": "stylelint '**/*.css' --cache",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,html,json,md,cjs}\"",
+    "test": "pnpm run prettier:check && pnpm run lint && pnpm run typecheck"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.31.0",
+    "lodash.get": "^4.4.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router": "^7.5.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@types/lodash.get": "^4.4.9",
     "@types/node": "^22.14.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -27,6 +37,7 @@
     "globals": "^16.0.0",
     "postcss-lit": "^1.2.0",
     "prettier": "^3.5.3",
+    "sass": "^1.86.3",
     "stylelint": "^16.18.0",
     "stylelint-config-standard": "^38.0.0",
     "stylelint-config-standard-scss": "^14.0.0",

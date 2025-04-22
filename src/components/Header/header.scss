@@ -1,0 +1,23 @@
+@use "@/libs/variables" as v;
+
+header {
+  padding: v.add-padding(44px, 60px);
+  @include v.add-flex(row, null, space-between);
+
+  nav {
+    @include v.add-flex(row, 40px, null, center);
+
+    select {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      word-wrap: normal;
+      overflow: hidden;
+    }
+  }
+}
