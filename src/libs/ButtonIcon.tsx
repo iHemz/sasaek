@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef, lazy, Suspense } from "react";
 
 interface ButtonIconProps extends ComponentPropsWithoutRef<"button"> {
-  icon: string;
+  icon?: string;
   text?: string;
   size?: number;
   className?: string;

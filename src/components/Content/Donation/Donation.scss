@@ -1,0 +1,44 @@
+@use "@/libs/variables" as v;
+
+.donation {
+  padding: v.add-padding(80px, 16.67%);
+  background-color: v.$bg-secondary;
+
+  .content {
+    @include v.add-flex(column, 52px, null, center);
+    padding: v.add-padding(0, 40px);
+    max-width: 1280px;
+
+    .info-container {
+      @include v.add-flex(column, 32px, null, center);
+
+      .title {
+        @include v.secondary-d6;
+      }
+
+      .account-info {
+        @include v.add-flex(column, 8px, null, center);
+        @include v.secondary-h3;
+      }
+    }
+
+    .download-btns {
+      @include v.add-flex(row, 12px);
+
+      button {
+        width: auto;
+        height: auto;
+        border-radius: 9999px;
+        padding: v.add-padding(16px, 24px);
+        background-color: transparent;
+        border: 1px solid v.$text-color;
+        color: v.$text-color;
+        @include v.add-flex(row-reverse, 8px, null, center);
+
+        &:hover {
+          background-color: rgba(v.$text-color, 0.1);
+        }
+      }
+    }
+  }
+}

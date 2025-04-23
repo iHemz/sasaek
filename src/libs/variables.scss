@@ -26,6 +26,7 @@ $grey-2: #eee;
 $grey-3: #bbbbbb;
 $grey-4: #4c4c4c;
 $denim-200: #d0def0;
+$bg-secondary: #f8f4f3;
 $transition: all 500ms ease-in-out;
 
 @mixin prefix($property, $value, $prefixes) {
@@ -159,4 +160,9 @@ $transition: all 500ms ease-in-out;
 @mixin secondary-h2 {
   @include -bold-style;
   font-size: 24px;
+}
+
+@mixin secondary-h3 {
+  @include -bold-style;
+  font-size: 20px;
 }

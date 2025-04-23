@@ -3,6 +3,7 @@ import "@/components/Content/Activities/Activities.scss";
 import { useState } from "react";
 import { Activity } from "@/components/Content/Activities/Activity";
 import { data } from "@/components/Content/Activities/data";
+import { ButtonIcon } from "@/libs/ButtonIcon";
 import { Icon } from "@/libs/Icon";
 
 export function Activities() {
@@ -18,19 +19,17 @@ export function Activities() {
   return (
     <section className="activities">
       <nav className="tabs">
-        <button
+        <ButtonIcon
           onClick={() => handleClick("함께하는 일")}
           {...(isFirstTab && { className: "active" })}
-        >
-          함께하는 일
-        </button>
+          text="함께하는 일"
+        />
         <Icon title="IconPointFilled" />
-        <button
+        <ButtonIcon
           onClick={() => handleClick("우리의 흔적")}
           {...(!isFirstTab && { className: "active" })}
-        >
-          우리의 흔적
-        </button>
+          text="우리의 흔적"
+        />
       </nav>
 
       <section className="list">
