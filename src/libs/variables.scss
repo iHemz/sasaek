@@ -1,6 +1,7 @@
 @use "sass:string";
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
 $font-system: "Gowun Batang", serif;
 $font-pretendard:
@@ -15,6 +16,7 @@ $font-pretendard:
   "Open Sans",
   "Helvetica Neue",
   sans-serif;
+$font-nanum: "Nanum Myeongjo", serif;
 $color-scheme: light dark;
 $base-bg: #fff;
 $font-normal: 400;
@@ -25,6 +27,10 @@ $grey-1: #d9d9d9;
 $grey-2: #eee;
 $grey-3: #bbbbbb;
 $grey-4: #4c4c4c;
+$grey-5: #f3f4f6;
+$grey-6: #6b7280;
+$grey-9: #111827;
+$grey-400: #9ca3af;
 $denim-200: #d0def0;
 $bg-secondary: #f8f4f3;
 $transition: all 500ms ease-in-out;
@@ -165,4 +171,50 @@ $transition: all 500ms ease-in-out;
 @mixin secondary-h3 {
   @include -bold-style;
   font-size: 20px;
+}
+
+@mixin nanum-bold {
+  @include -bold-style;
+  font-size: 20px;
+}
+
+@mixin fs-10 {
+  font-size: 10px;
+  line-height: 1.5;
+  @include use-pretendard;
+}
+
+@mixin fs-12 {
+  font-size: 12px;
+  line-height: 1.7;
+  @include use-pretendard;
+}
+
+@mixin bold-fs-12 {
+  @include use-pretendard;
+  @include -bold-style;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+@mixin bold-fs-16 {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+@mixin white-btn {
+  width: auto;
+  height: auto;
+  border-radius: 9999px;
+  padding: add-padding(16px, 24px);
+  background-color: transparent;
+  border: 1px solid $text-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: rgba($text-color, 0.1);
+  }
 }

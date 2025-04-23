@@ -28,7 +28,9 @@ export function Chairman() {
               <img src={chairmanSignature} alt="" />
             </section>
 
-            <ButtonIcon text="인터뷰 더 보기" icon="IconChevronRight" className="chairman-btn" />
+            <ButtonIcon icon="IconChevronRight" className="chairman-btn">
+              인터뷰 더 보기
+            </ButtonIcon>
           </div>
         </div>
       </section>

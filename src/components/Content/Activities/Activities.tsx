@@ -22,14 +22,16 @@ export function Activities() {
         <ButtonIcon
           onClick={() => handleClick("함께하는 일")}
           {...(isFirstTab && { className: "active" })}
-          text="함께하는 일"
-        />
+        >
+          함께하는 일
+        </ButtonIcon>
         <Icon title="IconPointFilled" />
         <ButtonIcon
           onClick={() => handleClick("우리의 흔적")}
           {...(!isFirstTab && { className: "active" })}
-          text="우리의 흔적"
-        />
+        >
+          우리의 흔적
+        </ButtonIcon>
       </nav>
 
       <section className="list">

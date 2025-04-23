@@ -11,3 +11,5 @@ export { default as detailImage } from "@/assets/detail_image.png";
 export { default as dimHero } from "@/assets/dimHero.png";
 export { default as headlinerImage } from "@/assets/headliner.jpeg";
 export { default as heroImage } from "@/assets/hero.png";
+export { default as mobileHeroImage } from "@/assets/mobile-phone.png";
+export { default as nowImage } from "@/assets/now-image.png";

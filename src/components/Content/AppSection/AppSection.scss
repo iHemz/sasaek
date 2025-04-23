@@ -1,0 +1,232 @@
+@use "@/libs/variables" as v;
+
+.app-section {
+  padding: v.add-padding(240px, 40px);
+  margin: v.add-padding(0, 16.67%);
+  max-width: 1280px;
+
+  .content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    aside {
+      width: 360px;
+      cursor: default;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+
+      .mobile-app {
+        width: 100%;
+        border-radius: 32px;
+        color: v.$base-bg;
+        pointer-events: none;
+        box-shadow: 0 12px 52px 0 rgba(#000, 0.14);
+
+        header {
+          height: 400px;
+          width: 100%;
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          background: url("../../../assets/mobile-phone.png");
+          background-position: 40% 80%;
+          padding: 0;
+          @include v.add-flex(column, null, space-between, null);
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent 0%, #000 200%);
+            z-index: 0;
+          }
+
+          button {
+            width: auto;
+            height: fit-content;
+            padding: 0;
+            background-color: transparent;
+
+            &:nth-of-type(2) {
+              padding: 2px;
+            }
+          }
+
+          .header-menu {
+            width: 100%;
+            z-index: 1;
+
+            .header-top {
+              width: 100%;
+              padding: v.add-padding(16px, 20px);
+              @include v.add-flex(row, null, space-between, center);
+
+              .other-btns {
+                @include v.add-flex(row, 20px, null, center);
+              }
+            }
+
+            .header-bottom {
+              padding: v.add-padding(0, 20px);
+              @include v.add-flex(row, 0, space-between, center);
+              height: 40px;
+              width: inherit;
+              font-family: v.$font-pretendard;
+              font-size: 14px;
+              line-height: 1.7;
+              letter-spacing: 0.8px;
+
+              a {
+                text-decoration: none;
+                color: v.$base-bg;
+                height: inherit;
+                place-content: center;
+
+                &.active {
+                  border-bottom: 2px solid v.$base-bg;
+                }
+              }
+            }
+          }
+
+          .header-content {
+            padding: v.add-padding(32px, 24px);
+            width: 100%;
+            @include v.add-flex(row, null, space-between, flex-end);
+            z-index: 1;
+
+            .column {
+              @include v.add-flex(column, 8px);
+            }
+
+            .title {
+              @include v.nanum-bold;
+              text-align: left;
+            }
+
+            .desc {
+              @include v.fs-12;
+            }
+
+            .pagination {
+              @include v.add-flex(row, 2px, null, center);
+              padding: v.add-padding(2px, 4px, 2px, 10px);
+
+              .page-number {
+                @include v.fs-10;
+              }
+            }
+          }
+        }
+
+        footer {
+          min-height: 402px;
+          width: 100%;
+          background-color: v.$grey-5;
+          border-bottom-right-radius: 30px;
+          border-bottom-left-radius: 30px;
+          padding: v.add-padding(30px, 20px);
+          @include v.add-flex(column, 20px);
+          color: v.$text-color;
+
+          .now-date-container {
+            @include v.add-flex(row, 20px, space-between, center);
+            width: inherit;
+
+            span:first-child {
+              @include v.bold-fs-16;
+            }
+
+            span:last-child {
+              @include v.fs-10;
+              line-height: 1.8;
+              letter-spacing: 0.02em;
+              color: v.$grey-6;
+            }
+          }
+
+          button {
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
+            background-color: transparent;
+            color: v.$text-color;
+            padding: 0;
+          }
+
+          .now-content-container {
+            @include v.add-flex(column, 10px);
+            width: inherit;
+            background: v.$base-bg;
+            border-radius: 10px;
+
+            img {
+              width: 100%;
+              height: 200px;
+              border-radius: 10px;
+            }
+
+            .now-content-details {
+              padding: v.add-padding(16px);
+              @include v.add-flex(column, 12px);
+              color: v.$grey-9;
+              position: relative;
+              width: 100%;
+
+              .now-content-header {
+                @include v.add-flex(row, 12px, null, center);
+                @include v.bold-fs-12;
+              }
+
+              .now-content-text {
+                @include v.fs-12;
+              }
+
+              .now-footer-icon {
+                position: absolute;
+                border-radius: 99px;
+                width: 60.28px;
+                height: 60.28px;
+                padding: v.add-padding(16px);
+                @include v.add-flex(row, null, center, center);
+                border: 1px solid v.$grey-400;
+                background-color: v.$base-bg;
+                box-shadow: 0 4px 4px 0 rgba(#000, 0.25);
+                top: -30px;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .info-container {
+    @include v.add-flex(column, 72px);
+    max-width: 600px;
+
+    @media screen and (min-width: 1660px) {
+      max-width: 649px;
+    }
+
+    .app-header {
+      @include v.add-flex(column, 40px);
+
+      p {
+        @include v.secondary-d3;
+        text-align: left;
+      }
+    }
+
+    button {
+      @include v.white-btn;
+      @include v.add-flex(row, 8px, null, center);
+    }
+  }
+}

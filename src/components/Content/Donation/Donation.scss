@@ -26,18 +26,8 @@
       @include v.add-flex(row, 12px);
 
       button {
-        width: auto;
-        height: auto;
-        border-radius: 9999px;
-        padding: v.add-padding(16px, 24px);
-        background-color: transparent;
-        border: 1px solid v.$text-color;
-        color: v.$text-color;
+        @include v.white-btn;
         @include v.add-flex(row-reverse, 8px, null, center);
-
-        &:hover {
-          background-color: rgba(v.$text-color, 0.1);
-        }
       }
     }
   }

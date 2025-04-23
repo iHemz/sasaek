@@ -16,8 +16,8 @@ export function Donation() {
         </section>
 
         <section className="download-btns">
-          <ButtonIcon icon="IconHeartHandshake" text="정기 후원" />
-          <ButtonIcon text="일시 후원" />
+          <ButtonIcon icon="IconHeartHandshake">정기 후원</ButtonIcon>
+          <ButtonIcon>일시 후원</ButtonIcon>
         </section>
       </div>
     </section>
