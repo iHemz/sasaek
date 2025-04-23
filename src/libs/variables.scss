@@ -140,9 +140,20 @@ $transition: all 500ms ease-in-out;
   text-align: center;
 }
 
+@mixin primary-p3 {
+  @include use-pretendard;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 @mixin secondary-d3 {
   @include -bold-style;
   font-size: 60px;
+}
+
+@mixin secondary-d6 {
+  @include -bold-style;
+  font-size: 40px;
 }
 
 @mixin secondary-h2 {

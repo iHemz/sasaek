@@ -1,3 +1,7 @@
+export { default as activity1 } from "@/assets/activity-1.png";
+export { default as activity2 } from "@/assets/activity-2.png";
+export { default as activity3 } from "@/assets/activity-3.png";
+export { default as activity4 } from "@/assets/activity-4.png";
 export { default as chairman1 } from "@/assets/chairman-1.png";
 export { default as chairman2 } from "@/assets/chairman-2.png";
 export { default as chairman3 } from "@/assets/chairman-3.png";

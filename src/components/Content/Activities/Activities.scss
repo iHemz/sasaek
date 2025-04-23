@@ -1,0 +1,73 @@
+@use "@/libs/variables" as v;
+
+.activities {
+  @include v.add-flex(column, 60px);
+  padding: v.add-padding(240px, 40px);
+  margin: v.add-padding(0, 16.67%);
+  max-width: 1280px;
+
+  .tabs {
+    @include v.add-flex(row, 32px, center, center);
+    color: v.$grey-3;
+    width: 100%;
+
+    button {
+      background-color: transparent;
+      color: v.$grey-3;
+      width: auto;
+      height: fit-content;
+      @include v.secondary-d3;
+
+      &.active {
+        color: v.$text-color;
+      }
+    }
+  }
+
+  .list {
+    @include v.add-flex(column, 52px);
+    width: 100%;
+    // overflow: hidden;
+
+    .activity-item {
+      @include v.add-flex(row, 40px, null, flex-end);
+      height: 171px;
+      width: 100%;
+
+      &:nth-of-type(even) {
+        flex-flow: row-reverse;
+
+        .activity-detail {
+          text-align: right;
+          align-items: flex-end;
+        }
+      }
+
+      .activity-image-container {
+        flex-basis: 71%;
+        overflow: hidden;
+        height: inherit;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .activity-detail {
+        @include v.add-flex(column-reverse, 16px);
+
+        .title {
+          @include v.secondary-d6;
+        }
+
+        .desc {
+          @include v.primary-p3;
+        }
+      }
+    }
+  }
+}
