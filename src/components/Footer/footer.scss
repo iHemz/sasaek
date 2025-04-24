@@ -1,0 +1,93 @@
+@use "@/libs/variables" as v;
+
+footer {
+  &:not(.now-footer) {
+    background: v.$bg-dark;
+    padding: v.add-padding(120px, 16.67%);
+    color: v.$base-bg;
+    @include v.add-flex(row, 20.52%);
+
+    .footer-content {
+      @include v.add-flex(row, 40px, space-between);
+      padding: v.add-padding(0, 40px);
+      max-width: 1280px;
+
+      section:first-child {
+        @include v.add-flex(column, 76px);
+        flex-shrink: 0;
+        flex-basis: 57.2%;
+
+        .info {
+          @include v.add-flex(column, 32px);
+
+          .info-links {
+            @include v.add-flex(row, 16px);
+
+            a {
+              @include v.primary-h5;
+              color: v.$base-bg;
+
+              &:nth-of-type(3) {
+                @include v.primary-p4;
+                color: v.$bg-tertiary;
+              }
+            }
+          }
+
+          .info-details {
+            @include v.add-flex(column, 10px);
+
+            .label {
+              color: v.$bg-tertiary;
+            }
+
+            p span:first-child {
+              margin-right: 4px;
+            }
+
+            div {
+              @include v.add-flex(row, 16px);
+              @include v.primary-p6;
+              color: v.$base-bg;
+              flex-wrap: wrap;
+            }
+
+            .copyright-notice {
+              @include v.primary-p6;
+            }
+          }
+        }
+      }
+
+      section:last-child {
+        @include v.add-flex(column, 32px);
+
+        .right-content {
+          @include v.add-flex(column, 12px);
+
+          .newsletter-title {
+            @include v.primary-h2;
+          }
+
+          .customer-service-info {
+            @include v.primary-p4;
+          }
+        }
+
+        .footer-btn {
+          width: 100%;
+          height: auto;
+          background-color: transparent;
+          padding: 16px;
+          border-radius: 9999px;
+          border: 1px solid v.$base-bg;
+          @include v.add-flex(row, null, space-between, center);
+
+          &:hover {
+            background-color: rgba(v.$base-bg, 0.1);
+          }
+        }
+      }
+    }
+  }
+}

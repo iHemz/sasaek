@@ -45,7 +45,7 @@ export function Mobile() {
         </section>
       </header>
 
-      <footer>
+      <footer className="now-footer">
         <section className="now-date-container">
           <p>
             <span>오늘의 향기</span> <br />
