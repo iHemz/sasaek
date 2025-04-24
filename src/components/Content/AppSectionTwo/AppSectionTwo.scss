@@ -1,0 +1,76 @@
+@use "@/libs/variables" as v;
+
+.app-section--2 {
+  padding: v.add-padding(0, 40px, 240px);
+  margin: v.add-padding(0, 16.67%);
+  max-width: 1280px;
+  @include v.add-flex(row, 120px);
+  overflow: hidden;
+
+  .control-area {
+    @include v.add-flex(column, null, space-between);
+    height: 330px;
+    flex-basis: 245px;
+    flex-shrink: 0;
+
+    p {
+      @include v.secondary-d3;
+      text-align: left;
+    }
+
+    .buttons {
+      @include v.add-flex(row, 12px, null, center);
+    }
+  }
+
+  .brands {
+    position: relative;
+    height: 330px;
+    width: 100%;
+    overflow: hidden;
+
+    .slider-container {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: v.$transition;
+      @include v.add-flex(row, 60px);
+
+      > div {
+        width: 308px;
+        @include v.add-flex(column, 32px);
+        flex-shrink: 0;
+
+        .img-area {
+          width: 100%;
+          height: 200px;
+          padding: v.add-padding(44px);
+          border-radius: 500px;
+          place-content: center;
+          place-items: center;
+
+          img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .details {
+          @include v.add-flex(column, 8px, null, center);
+
+          p:first-child {
+            @include v.primary-h2;
+          }
+
+          p:last-child {
+            @include v.primary-p3;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Activities } from "@/components/Content/Activities/Activities";
 import { AppSection } from "@/components/Content/AppSection/AppSection";
+import { AppSectionTwo } from "@/components/Content/AppSectionTwo/AppSectionTwo";
 import { Chairman } from "@/components/Content/Chairman/Chairman";
 import { Culture } from "@/components/Content/Culture/Culture";
 import { Donation } from "@/components/Content/Donation/Donation";
@@ -14,6 +15,7 @@ export function Content() {
       <Activities />
       <Donation />
       <AppSection />
+      <AppSectionTwo />
     </main>
   );
 }

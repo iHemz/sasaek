@@ -153,6 +153,14 @@ $transition: all 500ms ease-in-out;
   line-height: 1.5;
 }
 
+@mixin primary-h2 {
+  @include use-pretendard;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+}
+
 @mixin secondary-d3 {
   @include -bold-style;
   font-size: 60px;
