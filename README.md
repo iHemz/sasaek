@@ -1,5 +1,7 @@
 # Sasaek
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/ihemz/sasaek)
+
 A modern React application built with Vite, TypeScript, and Chakra UI.
 
 ## Tech Stack
