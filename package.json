@@ -16,6 +16,8 @@
     "test": "pnpm run prettier:check && pnpm run lint && pnpm run typecheck"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.16.1",
+    "@emotion/react": "^11.14.0",
     "@tabler/icons-react": "^3.31.0",
     "lodash.get": "^4.4.2",
     "react": "^19.0.0",

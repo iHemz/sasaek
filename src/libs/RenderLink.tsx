@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 type LinkProps = {
   href: string;
@@ -6,5 +6,12 @@ type LinkProps = {
 };
 
 export const RenderLink = ({ href, content }: LinkProps) => {
-  return <Link to={href}>{content}</Link>;
+  const { pathname } = useLocation();
+  const isActive = pathname === href;
+
+  return (
+    <Link className={isActive ? "renderlink-active" : undefined} to={href}>
+      {content}
+    </Link>
+  );
 };

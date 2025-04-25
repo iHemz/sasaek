@@ -35,6 +35,7 @@ $denim-200: #d0def0;
 $bg-secondary: #f8f4f3;
 $bg-dark: #222222;
 $bg-tertiary: #7c7c7c;
+$bg-tertiary-red: #8c5947;
 $transition: all 500ms ease-in-out;
 
 @mixin prefix($property, $value, $prefixes) {
@@ -173,6 +174,13 @@ $transition: all 500ms ease-in-out;
   font-size: 24px;
   line-height: 1.5;
   text-align: center;
+}
+
+@mixin primary-h3 {
+  @include use-pretendard;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 @mixin primary-h5 {

@@ -41,7 +41,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  > * {
+  > *:not(.select-dropdown) {
     width: 100%;
     min-height: inherit;
     height: 100%;
@@ -71,5 +71,67 @@ button {
 
   &:disabled {
     background-color: rgba($text-color, 0.3);
+  }
+}
+
+a {
+  color: $text-color;
+  @include primary-h3;
+
+  &.renderlink-active {
+    color: $bg-tertiary-red;
+  }
+}
+
+.custom-select {
+  background: $bg-tertiary;
+  position: relative;
+  padding: add-padding(14px);
+  min-height: 48px;
+  min-width: 106px;
+  border-radius: 9999px;
+  @include add-flex(row, 6px, center, center);
+  @include singleline-button2;
+
+  &[data-state="open"] {
+    outline: 2px solid black;
+    outline-offset: 2px;
+  }
+
+  .placeholder {
+    position: absolute;
+    top: 16px;
+    left: 14px;
+    color: rgba($base-bg, 0.5);
+  }
+}
+
+.select-dropdown {
+  position: absolute;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: $base-bg;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(black, 0.1);
+  padding: 8px;
+  @include add-flex(column, 4px);
+
+  .select-option {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    @include singleline-button2;
+    text-align: left;
+    width: 100%;
+
+    &.active {
+      background-color: $bg-tertiary;
+      color: $base-bg;
+    }
+
+    &:not(.active):hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
   }
 }

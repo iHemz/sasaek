@@ -2,6 +2,7 @@ export {
   IconArrowLeft,
   IconArrowRight,
   IconBell,
+  IconChevronDown,
   IconChevronRight,
   IconDownload,
   IconHeartHandshake,
