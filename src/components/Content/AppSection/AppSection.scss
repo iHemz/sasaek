@@ -76,12 +76,12 @@
               @include v.add-flex(row, 0, space-between, center);
               height: 40px;
               width: inherit;
-              font-family: v.$font-pretendard;
-              font-size: 14px;
-              line-height: 1.7;
-              letter-spacing: 0.8px;
-
+              
               a {
+                font-family: v.$font-pretendard;
+                font-size: 14px;
+                line-height: 1.7;
+                letter-spacing: 0.8px;
                 text-decoration: none;
                 color: v.$base-bg;
                 height: inherit;
